@@ -2,9 +2,29 @@
 
 ## Setup
 
-Before starting the app, you need to run the management command `update_pokedex` to cache pokedex data in the local database.
+1. Install your python environment:
 
-    python manage update_pokedex
+    ```python3 -m venv .venv```
+
+2. Source your env:
+
+    ```source .venv/bin/activate```
+
+3. Setup env variables:
+
+    ```cp .env.example .env```
+
+4. Migrate the database:
+
+    ```python manage.py migrate```
+
+5. Populate/update the pokedex cache:
+
+    ```python manage update_pokedex```
+
+6. Run the development server:
+
+    ```python manage.py runserver_plus 0.0.0.0:8080```
 
 ## Database
 
